@@ -1,0 +1,9 @@
+###* Base Environments
+@BASE_URL = http://localhost:3333
+@RESOURCE = products
+
+###! Products
+GET {{BASE_URL}}/{{RESOURCE}}
+
+###
+GET {{BASE_URL}}/{{RESOURCE}}/1
