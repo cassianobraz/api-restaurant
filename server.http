@@ -3,7 +3,24 @@
 @RESOURCE = products
 
 ###! Products
-GET {{BASE_URL}}/{{RESOURCE}}
+GET {{BASE_URL}}/{{RESOURCE}}?name
 
 ###
-GET {{BASE_URL}}/{{RESOURCE}}/1
+POST {{BASE_URL}}/{{RESOURCE}}
+Content-Type: application/json
+
+{
+  "name": "Executivo de frango grelhado",
+  "price": 70
+}
+###
+PUT  {{BASE_URL}}/{{RESOURCE}}/7
+Content-Type: application/json
+
+{
+  "name": "Executivo de frango grelhado",
+  "price": 70
+}
+
+###
+DELETE {{BASE_URL}}/{{RESOURCE}}/9
