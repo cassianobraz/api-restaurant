@@ -18,7 +18,7 @@ PUT  {{BASE_URL}}/{{RESOURCE}}/7
 Content-Type: application/json
 
 {
-  "name": "Executivo de frango grelhado",
+  "name": "Executivo",
   "price": 70
 }
 
