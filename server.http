@@ -3,6 +3,7 @@
 @RESOURCE = products
 @RESOURCE_TABLES = tables
 @RESOURCE_TABLES_SESSIONS = tables-sessions
+@RESOURCE_TABLES_ORDERS = orders
 
 ###! Products
 GET {{BASE_URL}}/{{RESOURCE}}?name
@@ -43,3 +44,13 @@ GET {{BASE_URL}}/{{RESOURCE_TABLES_SESSIONS}}
 
 ### 
 PATCH {{BASE_URL}}/{{RESOURCE_TABLES_SESSIONS}}/1
+
+### 
+POST {{BASE_URL}}/{{RESOURCE_TABLES_ORDERS}}
+Content-Type: application/json
+
+{
+  "table_session_id": 1,
+  "product_id": 1,
+  "quantity": 1
+}
