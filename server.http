@@ -1,6 +1,8 @@
 ###* Base Environments
 @BASE_URL = http://localhost:3333
 @RESOURCE = products
+@RESOURCE_TABLES = tables
+@RESOURCE_TABLES_SESSIONS = tables-sessions
 
 ###! Products
 GET {{BASE_URL}}/{{RESOURCE}}?name
@@ -24,3 +26,20 @@ Content-Type: application/json
 
 ###
 DELETE {{BASE_URL}}/{{RESOURCE}}/9
+
+### TABLES
+GET {{BASE_URL}}/{{RESOURCE_TABLES}}
+
+### TABLES-SESSIONS
+POST  {{BASE_URL}}/{{RESOURCE_TABLES_SESSIONS}}
+Content-Type: application/json
+
+{
+  "table_id": 114
+}
+
+### 
+GET {{BASE_URL}}/{{RESOURCE_TABLES_SESSIONS}}
+
+### 
+PATCH {{BASE_URL}}/{{RESOURCE_TABLES_SESSIONS}}/1
