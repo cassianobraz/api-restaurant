@@ -1,9 +1,14 @@
-import { OrdersController } from '@/controllers/orders-controller';
-import { Router } from 'express';
+import { OrdersController } from '@/controllers/orders-controller'
+import { Router } from 'express'
 
-const ordersRouter = Router();
-const ordersController = new OrdersController();
+const ordersRoutes = Router()
+const ordersController = new OrdersController()
 
-ordersRouter.post('/', ordersController.create);
+ordersRoutes.post('/', ordersController.create)
+ordersRoutes.get('/table-session/:table_session_id', ordersController.index)
+ordersRoutes.get(
+  '/table-session/:table_session_id/total',
+  ordersController.show
+)
 
-export { ordersRouter };
+export { ordersRoutes }

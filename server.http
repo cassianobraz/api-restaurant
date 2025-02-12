@@ -6,7 +6,7 @@
 @RESOURCE_TABLES_ORDERS = orders
 
 ###! Products
-GET {{BASE_URL}}/{{RESOURCE}}?name
+GET {{BASE_URL}}/{{RESOURCE}}
 
 ###
 POST {{BASE_URL}}/{{RESOURCE}}
@@ -36,7 +36,7 @@ POST  {{BASE_URL}}/{{RESOURCE_TABLES_SESSIONS}}
 Content-Type: application/json
 
 {
-  "table_id": 114
+  "table_id": 1
 }
 
 ### 
@@ -50,7 +50,13 @@ POST {{BASE_URL}}/{{RESOURCE_TABLES_ORDERS}}
 Content-Type: application/json
 
 {
-  "table_session_id": 1,
-  "product_id": 1,
-  "quantity": 1
+  "table_session_id": 3,
+  "product_id": 28,
+  "quantity": 2
 }
+
+### 
+GET  {{BASE_URL}}/{{RESOURCE_TABLES_ORDERS}}/table-session/
+### 
+GET  {{BASE_URL}}/{{RESOURCE_TABLES_ORDERS}}/table-session/3/total
+
